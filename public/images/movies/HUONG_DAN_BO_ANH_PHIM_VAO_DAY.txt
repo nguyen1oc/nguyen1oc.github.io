@@ -1,0 +1,6 @@
+# Hướng dẫn thêm Ảnh Poster Phim (Movie Posters)
+
+Bạn hãy bỏ các ảnh bìa / poster phim của bạn vào thư mục này:
+- Đặt tên file theo dạng: `movie1.jpg`, `movie2.jpg`, `movie3.jpg`, `movie4.jpg`, v.v. (hỗ trợ .jpg, .png, .webp).
+- Tỉ lệ khuyến nghị: Tỉ lệ poster 2:3 hoặc 16:9 cinematic.
+- Sau khi bỏ ảnh vào, bạn có thể mở file `src/data/portfolioData.ts` để viết cảm nhận (Review), bài học (Takeaway) và câu quote yêu thích của từng bộ phim.

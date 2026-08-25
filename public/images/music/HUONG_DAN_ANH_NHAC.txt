@@ -1,0 +1,5 @@
+# Hướng dẫn thêm Ảnh Nghệ sĩ / Album Nhạc
+
+Bạn có thể bỏ ảnh nghệ sĩ / album vào thư mục này nếu muốn:
+- Đặt tên file: `artist1.jpg`, `artist2.jpg`, v.v.
+- Tỉ lệ: Ảnh vuông 1:1 làm tâm đĩa than xoay tròn.

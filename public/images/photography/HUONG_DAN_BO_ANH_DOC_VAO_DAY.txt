@@ -1,0 +1,6 @@
+# Hướng dẫn thêm Ảnh Chụp Dọc (Vertical Photography)
+
+Bạn hãy bỏ các bức ảnh chụp dọc của bạn vào thư mục này:
+- Đặt tên file theo dạng: `photo1.jpg`, `photo2.jpg`, `photo3.jpg`, `photo4.jpg`, `photo5.jpg`, v.v. (hỗ trợ .jpg, .png, .webp).
+- Tỉ lệ khuyến nghị: Tỉ lệ khung hình dọc 3:4 hoặc 9:16 (ví dụ: 1200x1600 hoặc 1080x1920).
+- Sau khi bỏ ảnh vào, bạn có thể mở file `src/data/portfolioData.ts` để chỉnh sửa tiêu đề, địa điểm (location), caption và thông số máy ảnh (EXIF).

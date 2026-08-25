@@ -1,0 +1,6 @@
+# Hướng dẫn thêm Ảnh Đại Diện (Avatar)
+
+Bạn hãy bỏ ảnh chân dung / avatar của bạn vào thư mục này:
+- Đặt tên file là: `avatar.jpg` (hoặc `avatar.png`, `avatar.webp`)
+- Định dạng khuyến nghị: Ảnh vuông hoặc tỉ lệ 1:1, độ phân giải từ 400x400 trở lên.
+- Khi bỏ ảnh vào đây, portfolio sẽ tự động ưu tiên load ảnh đại diện thật của bạn!
