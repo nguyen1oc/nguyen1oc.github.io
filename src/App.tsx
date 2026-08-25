@@ -18,25 +18,22 @@ import {
   Film, 
   Disc3, 
   Mail, 
-  Phone, 
   Github, 
   Linkedin, 
   Facebook, 
   Download, 
   Check, 
   Copy, 
-  ArrowUpRight, 
   X, 
   Play, 
   Pause, 
   Send, 
   CheckCircle2, 
-  ExternalLink,
-  MapPin,
-  ArrowDown,
-  ChevronLeft,
-  ChevronRight,
-  ChevronUp
+  ExternalLink, 
+  ArrowDown, 
+  ChevronLeft, 
+  ChevronRight, 
+  ChevronUp 
 } from 'lucide-react';
 import { CVModal } from './components/CVModal';
 

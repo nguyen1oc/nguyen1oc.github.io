@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { PERSONAL_INFO, EXPERIENCES, PROJECTS, TECH_CATEGORIES } from '../data/portfolioData';
-import { X, Download, Printer, Copy, Check, FileText, GraduationCap, Briefcase, Code, ExternalLink } from 'lucide-react';
+import { X, Download, Printer, Copy, Check, FileText, GraduationCap, Briefcase, Code } from 'lucide-react';
 
 interface CVModalProps {
   isOpen: boolean;
