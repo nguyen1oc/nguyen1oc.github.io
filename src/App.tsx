@@ -725,17 +725,23 @@ export const App: React.FC = () => {
           MODALS
       ======================================================== */}
 
-      {/* MODAL 1: PHOTO LIGHTBOX */}
+      {/* MODAL 1: PHOTO LIGHTBOX (Backdrop Click to Dismiss) */}
       {selectedPhoto && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/90 backdrop-blur-md animate-fadeIn">
+        <div 
+          onClick={() => setSelectedPhoto(null)}
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/90 backdrop-blur-md animate-fadeIn cursor-pointer"
+        >
           <button
             onClick={() => setSelectedPhoto(null)}
-            className="absolute top-4 right-4 z-50 p-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+            className="absolute top-4 right-4 z-50 p-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors cursor-pointer"
           >
             <X className="w-5 h-5" />
           </button>
 
-          <div className="relative w-full max-w-2xl bg-[#141414] text-zinc-200 rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row border border-white/10 max-h-[90vh]">
+          <div 
+            onClick={(e) => e.stopPropagation()}
+            className="relative w-full max-w-2xl bg-[#141414] text-zinc-200 rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row border border-white/10 max-h-[90vh] cursor-default"
+          >
             <div className="md:w-1/2 bg-black flex items-center justify-center p-2">
               <img
                 src={getPhotoSrc(selectedPhoto)}
@@ -763,17 +769,23 @@ export const App: React.FC = () => {
         </div>
       )}
 
-      {/* MODAL 2: SPOTIFY VINYL RECORD PLAYER */}
+      {/* MODAL 2: SPOTIFY VINYL RECORD PLAYER (Backdrop Click to Dismiss) */}
       {selectedArtist && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/90 backdrop-blur-md animate-fadeIn">
+        <div 
+          onClick={() => setSelectedArtist(null)}
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/90 backdrop-blur-md animate-fadeIn cursor-pointer"
+        >
           <button
             onClick={() => setSelectedArtist(null)}
-            className="absolute top-4 right-4 z-50 p-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors"
+            className="absolute top-4 right-4 z-50 p-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors cursor-pointer"
           >
             <X className="w-5 h-5" />
           </button>
 
-          <div className="relative w-full max-w-xl bg-[#141414] text-zinc-200 rounded-3xl overflow-hidden shadow-2xl border border-white/10 p-6 sm:p-8 flex flex-col md:flex-row items-center gap-6 max-h-[90vh] overflow-y-auto custom-scrollbar">
+          <div 
+            onClick={(e) => e.stopPropagation()}
+            className="relative w-full max-w-xl bg-[#141414] text-zinc-200 rounded-3xl overflow-hidden shadow-2xl border border-white/10 p-6 sm:p-8 flex flex-col md:flex-row items-center gap-6 max-h-[90vh] overflow-y-auto custom-scrollbar cursor-default"
+          >
             
             {/* Spinning Vinyl */}
             <div className="flex flex-col items-center gap-3 shrink-0">

@@ -43,9 +43,15 @@ ${TECH_CATEGORIES.map((c) => `${c.category}: ${c.skills.join(', ')}`).join('\n')
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/80 backdrop-blur-md animate-fadeIn">
+    <div 
+      onClick={onClose}
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/80 backdrop-blur-md animate-fadeIn cursor-pointer"
+    >
       {/* Container */}
-      <div className="relative w-full max-w-3xl bg-[#141414] text-zinc-200 rounded-3xl overflow-hidden shadow-2xl border border-white/10 flex flex-col max-h-[92vh]">
+      <div 
+        onClick={(e) => e.stopPropagation()}
+        className="relative w-full max-w-3xl bg-[#141414] text-zinc-200 rounded-3xl overflow-hidden shadow-2xl border border-white/10 flex flex-col max-h-[92vh] cursor-default"
+      >
         {/* Header Bar */}
         <div className="p-4 sm:p-5 border-b border-white/[0.08] flex items-center justify-between bg-[#181818]">
           <div className="flex items-center gap-2.5">
