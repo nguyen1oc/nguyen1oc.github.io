@@ -471,7 +471,7 @@ export const MOVIES: MovieItem[] = [
   },
 ];
 
-// 16 Curated Vietnamese Indie & Hip-Hop Artists from YouTube Playlists
+// 16 Curated Vietnamese Indie & Hip-Hop Artists with Exact YouTube Channel Avatars
 export const ARTISTS: ArtistItem[] = [
   {
     id: 'a1',
@@ -479,7 +479,7 @@ export const ARTISTS: ArtistItem[] = [
     genre: 'Indie Soul / R&B',
     bio: 'Giai điệu lãng đãng, mộc mạc và sâu lắng cho những buổi chiều muộn.',
     localPath: '/images/music/haisam.jpg',
-    avatarUrl: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://yt3.googleusercontent.com/-YWsdwJt2EV8CDszrcccuwLzO_NI8Loh7agvnhmKm1rfpo2kbiDpj4rYhZN5JuUSNdgXQraiFg=s900-c-k-c0x00ffffff-no-rj',
     topTracks: [
       { title: 'Cuối Chiều', youtubeUrl: 'https://www.youtube.com/results?search_query=Hai+Sam+Cuoi+Chieu' },
       { title: 'Thế Thôi', youtubeUrl: 'https://www.youtube.com/results?search_query=Hai+Sam+The+Thoi' },
@@ -493,7 +493,7 @@ export const ARTISTS: ArtistItem[] = [
     genre: 'Indie Ballad / Acoustic',
     bio: 'Hoàng tử Indie Việt với những câu chuyện tình buồn da diết.',
     localPath: '/images/music/vu.jpg',
-    avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://yt3.googleusercontent.com/bpKh5MyMojA9WcirbVyVO0I0F0ZqvIMLodbqT_g8pjEUXBNo2ZrZCmiDZ5PTo8lrCBdlTbMd3Q=s900-c-k-c0x00ffffff-no-rj',
     topTracks: [
       { title: 'Bước Qua Mùa Cô Đơn', youtubeUrl: 'https://www.youtube.com/results?search_query=Vu+Buoc+Qua+Mua+Co+Don' },
       { title: 'Những Lời Hứa Bỏ Quên', youtubeUrl: 'https://www.youtube.com/results?search_query=Vu+Nhung+Loi+Hua+Bo+Quen' },
@@ -507,7 +507,7 @@ export const ARTISTS: ArtistItem[] = [
     genre: 'Lo-fi Acoustic / Indie',
     bio: 'Những lời tự tình mộc mạc bên tiếng đàn guitar phòng thu.',
     localPath: '/images/music/thinhsuy.jpg',
-    avatarUrl: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://yt3.googleusercontent.com/U4kGEfFAvYvtrhPQzN6gwWWGcbqKJiVXv1izZbWcuHC3IWX_fR4pImZd6yH57137zbgrHgoM=s900-c-k-c0x00ffffff-no-rj',
     topTracks: [
       { title: 'Một Đêm Say', youtubeUrl: 'https://www.youtube.com/results?search_query=Thinh+Suy+Mot+Dem+Say' },
       { title: 'Thắc Mắc', youtubeUrl: 'https://www.youtube.com/results?search_query=Thinh+Suy+Thac+Mac' },
@@ -521,7 +521,7 @@ export const ARTISTS: ArtistItem[] = [
     genre: 'Indie Pop / Storytelling',
     bio: 'Góc nhìn hóm hỉnh, chân thật và giàu chất thơ về cuộc sống thường nhật.',
     localPath: '/images/music/kien.jpg',
-    avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://yt3.googleusercontent.com/SCZgrnxC9HPrTh8LQAfSRdK8zTTmuD2tuPn7WsWuVpE7W2d_a8PI-tRmeVl-cuYqFEv-CYD7wA=s900-c-k-c0x00ffffff-no-rj',
     topTracks: [
       { title: 'Quả Tim Màu Lửa', youtubeUrl: 'https://www.youtube.com/results?search_query=Kien+Trinh+Qua+Tim+Mau+Lua' },
       { title: 'Tập Tành', youtubeUrl: 'https://www.youtube.com/results?search_query=Kien+Trinh+Tap+Tanh' },
@@ -535,7 +535,7 @@ export const ARTISTS: ArtistItem[] = [
     genre: 'Melodic Rap / Hip-Hop',
     bio: 'Âm hưởng autotune cảm xúc, năng lượng tuổi trẻ và chất riêng không thể trộn lẫn.',
     localPath: '/images/music/mck.jpg',
-    avatarUrl: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=400&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://yt3.googleusercontent.com/7m3VPhjnofh-BoaovkOKbs42C3UUtvTguE1sUm-4pyLhhMdMI-cUST6uQxYOgHSFacorjiBVIQ=s900-c-k-c0x00ffffff-no-rj',
     topTracks: [
       { title: 'Chìm Sâu', youtubeUrl: 'https://www.youtube.com/results?search_query=MCK+Chim+Sau' },
       { title: 'Tại Vì Sao', youtubeUrl: 'https://www.youtube.com/results?search_query=MCK+Tai+Vi+Sao' },
@@ -549,7 +549,7 @@ export const ARTISTS: ArtistItem[] = [
     genre: 'Folk / Chamber Pop',
     bio: 'Không gian âm nhạc mộc mạc, triết lý nhân sinh và trong trẻo như suối nguồn.',
     localPath: '/images/music/lecattrongly.jpg',
-    avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://yt3.googleusercontent.com/ZAajw4-f4nXjmNiHoOwECMnd8saL-SAOnilm5zD20sfUPLSPK-JI-pXJcRut8FtolKHPLEVGdg=s900-c-k-c0x00ffffff-no-rj',
     topTracks: [
       { title: 'Chênh Vênh', youtubeUrl: 'https://www.youtube.com/results?search_query=Le+Cat+Trong+Ly+Chenh+Venh' },
       { title: 'Tám Chữ Có', youtubeUrl: 'https://www.youtube.com/results?search_query=Le+Cat+Trong+Ly+Tam+Chu+Co' },
@@ -563,7 +563,7 @@ export const ARTISTS: ArtistItem[] = [
     genre: 'Rap / Urban Pop',
     bio: 'Những câu chuyện đời thường, tình bạn và thanh xuân qua từng giai điệu gần gũi.',
     localPath: '/images/music/dalab.jpg',
-    avatarUrl: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=400&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://yt3.googleusercontent.com/XvFuULyOHB8FEGgS6jW08wj6ZXHor5xsUwOkNf_khOVJOc_rbKnzfPny-g7vtjkceHguI2KHkQ=s900-c-k-c0x00ffffff-no-rj',
     topTracks: [
       { title: 'Thanh Xuân', youtubeUrl: 'https://www.youtube.com/results?search_query=Da+LAB+Thanh+Xuan' },
       { title: 'Gác Lại Âu Lo', youtubeUrl: 'https://www.youtube.com/results?search_query=Da+LAB+Gac+Lai+Au+Lo' },
@@ -577,7 +577,7 @@ export const ARTISTS: ArtistItem[] = [
     genre: 'Indie Rock / Synthwave',
     bio: 'Chất rock hiện đại pha trộn chất thơ đô thị đầy hoài niệm.',
     localPath: '/images/music/chillies.jpg',
-    avatarUrl: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=400&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://yt3.googleusercontent.com/6nnB3vvbwKRC0iiDxNAeXtsvdvPWjOPYBHpc9hAoqYX6b2mXXZg1gdHXoc7hir18_299W9y7=s900-c-k-c0x00ffffff-no-rj',
     topTracks: [
       { title: 'Vùng Ký Ức', youtubeUrl: 'https://www.youtube.com/results?search_query=Chillies+Vung+Ky+Uc' },
       { title: 'Mascara', youtubeUrl: 'https://www.youtube.com/results?search_query=Chillies+Mascara' },
@@ -591,7 +591,7 @@ export const ARTISTS: ArtistItem[] = [
     genre: 'Lo-fi Hip-Hop / Chill',
     bio: 'Không gian âm nhạc thư giãn, nhẹ nhàng như ánh nắng chiều.',
     localPath: '/images/music/1ng.jpg',
-    avatarUrl: 'https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=400&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://yt3.googleusercontent.com/9_bbQ1Rq8pGo9sAHXPpyWBsLaFyQGvLIhckToh8MF4LUOAOph0IGSbD4vjNVP8MdFVF_EdsE5w=s900-c-k-c0x00ffffff-no-rj',
     topTracks: [
       { title: 'Nắng Thủy Tinh', youtubeUrl: 'https://www.youtube.com/results?search_query=1nG+Nang+Thuy+Tinh' },
       { title: 'Mơ Màng', youtubeUrl: 'https://www.youtube.com/results?search_query=1nG+Mo+Mang' },
@@ -604,7 +604,7 @@ export const ARTISTS: ArtistItem[] = [
     genre: 'Indie Chill / Alternative',
     bio: 'Âm hưởng indie du dương mang sắc màu hiện đại và thư thái.',
     localPath: '/images/music/parsg.jpg',
-    avatarUrl: 'https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=400&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://yt3.googleusercontent.com/qR5hdJJoK_RK3zY3OmjdiGjDUX-Y7GjLOstOhwTk6-yWiZhumDvXpSUjGFpFlLPliw09NdATOvg=s900-c-k-c0x00ffffff-no-rj',
     topTracks: [
       { title: 'Ghé Qua', youtubeUrl: 'https://www.youtube.com/results?search_query=PARSG+official' },
       { title: 'Lối Nhỏ', youtubeUrl: 'https://www.youtube.com/results?search_query=PARSG+music' },
@@ -616,7 +616,7 @@ export const ARTISTS: ArtistItem[] = [
     genre: 'Modern Hip-Hop / Trap',
     bio: 'Flow mượt mà, phong cách cuốn hút và lời nhạc dí dỏm, thời thượng.',
     localPath: '/images/music/hieuthuhai.jpg',
-    avatarUrl: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://yt3.googleusercontent.com/ww8CFTHX3m3MVuc1zfmOBU1UB1U0tb0J_SgI3sEmWBnSPHYkQvdNFEXsTuvAlXjLK3eTfK3CoQ=s900-c-k-c0x00ffffff-no-rj',
     topTracks: [
       { title: 'Không Thể Say', youtubeUrl: 'https://www.youtube.com/results?search_query=HIEUTHUHAI+Khong+The+Say' },
       { title: 'Ngủ Một Mình', youtubeUrl: 'https://www.youtube.com/results?search_query=HIEUTHUHAI+Ngu+Mot+Minh' },
@@ -630,7 +630,7 @@ export const ARTISTS: ArtistItem[] = [
     genre: 'R&B / Hip-Hop Aesthetic',
     bio: 'Gu âm nhạc độc đáo, đậm chất thời trang và cảm xúc thành thị về đêm.',
     localPath: '/images/music/wean.jpg',
-    avatarUrl: 'https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://yt3.googleusercontent.com/BcdHWcqaEa3izRZ6M_7Ru5P8_S1VGTfZk7q_7l6471O3ZpYKte6tSeJSbAJhXkpIA6fzlBAzEA=s900-c-k-c0x00ffffff-no-rj',
     topTracks: [
       { title: 'Một Người Vì Em', youtubeUrl: 'https://www.youtube.com/results?search_query=WEAN+Mot+Nguoi+Vi+Em' },
       { title: 'She Said', youtubeUrl: 'https://www.youtube.com/results?search_query=WEAN+She+Said' },
@@ -644,7 +644,7 @@ export const ARTISTS: ArtistItem[] = [
     genre: 'Acoustic / Storytelling',
     bio: 'Thế giới nội tâm sâu lắng qua những ca từ đẹp như truyện ngắn.',
     localPath: '/images/music/tung.jpg',
-    avatarUrl: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://yt3.googleusercontent.com/dwBCN7C12jTRTxhFLqFAcTc79lkRDSjoNclEAWVW6Ps1rlZrGrrnXaNTZQVMGOSIeXPVwdtoMn8=s900-c-k-c0x00ffffff-no-rj',
     topTracks: [
       { title: 'Con Dế Mèn Hát Vào Mùa Hè', youtubeUrl: 'https://www.youtube.com/results?search_query=Tung+Con+De+Men+Hat+Vao+Mua+He' },
       { title: 'Ở Đây Lúc Này', youtubeUrl: 'https://www.youtube.com/results?search_query=Tung+O+Day+Luc+Nay' },
@@ -658,7 +658,7 @@ export const ARTISTS: ArtistItem[] = [
     genre: 'Indie Pop / Acoustic',
     bio: 'Những bản tình ca dịu dàng như tách trà thơm giữa buổi chiều Sài Gòn.',
     localPath: '/images/music/trang.jpg',
-    avatarUrl: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://yt3.googleusercontent.com/qSq7bE0stsa-H2b7mhqbin6TOJxrwy3m1nGS7nkrIAZyj7SmxL7_mlxwb03xparpb_no9x3sV9E=s900-c-k-c0x00ffffff-no-rj',
     topTracks: [
       { title: 'Bài Hát Của Em', youtubeUrl: 'https://www.youtube.com/results?search_query=Trang+Bai+Hat+Cua+Em' },
       { title: 'Chuyện Những Người Yêu Xa', youtubeUrl: 'https://www.youtube.com/results?search_query=Trang+Chuyen+Nhung+Nguoi+Yeu+Xa' },
@@ -672,7 +672,7 @@ export const ARTISTS: ArtistItem[] = [
     genre: 'Indie Rock / Alternative',
     bio: 'Chất rock thô mộc, góc nhìn sắc sảo và hoài niệm tuổi trẻ Hà Nội.',
     localPath: '/images/music/thang.jpg',
-    avatarUrl: 'https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=400&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://yt3.googleusercontent.com/dU67b_oWSc1kFJLGM2EWu45BVhaLLR93m8QbWziDvBcPU21F7JYYzUUpaE5g3Ex98yDGOmyNvy8=s900-c-k-c0x00ffffff-no-rj',
     topTracks: [
       { title: 'Trước Khi Em Tồn Tại', youtubeUrl: 'https://www.youtube.com/results?search_query=Thang+Truoc+Khi+Em+Ton+Tai' },
       { title: 'Em Dạo Này', youtubeUrl: 'https://www.youtube.com/results?search_query=Ngot+Em+Dao+Nay' },
@@ -686,7 +686,7 @@ export const ARTISTS: ArtistItem[] = [
     genre: 'Indie Hip-Hop / Soul',
     bio: 'Những câu chuyện hóm hỉnh, nhịp điệu thư thái bên ly cà phê chiều.',
     localPath: '/images/music/cam.jpg',
-    avatarUrl: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&auto=format&fit=crop&q=80',
+    avatarUrl: 'https://yt3.googleusercontent.com/PmHWCYBzL-xuTFdwpTdYhl04MpvRhKLdkxazbwdxVfAqrexeA4ZmQ0Q1EmcHVhFmb1jJjV_2=s900-c-k-c0x00ffffff-no-rj',
     topTracks: [
       { title: 'Tủn Mủn', youtubeUrl: 'https://www.youtube.com/results?search_query=Cam+mrdd47+Tun+Mun' },
       { title: 'Lạch Cạch', youtubeUrl: 'https://www.youtube.com/results?search_query=Cam+mrdd47+Lach+Cach' },
