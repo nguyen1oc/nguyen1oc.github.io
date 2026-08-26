@@ -32,17 +32,6 @@ export const App: React.FC = () => {
   const [selectedPhoto, setSelectedPhoto] = useState<PhotoItem | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
-  const handleDirectDownloadCV = () => {
-    const cvUrl = `${import.meta.env.BASE_URL}cv/NguyenThienLoc_Resume.pdf`;
-    const link = document.createElement('a');
-    link.href = cvUrl;
-    link.download = 'NguyenThienLoc_Resume.pdf';
-    link.target = '_blank';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   // Bottom-right Floating CTA pop-up state
   const [showFloatingCTA, setShowFloatingCTA] = useState(false);
   const [hasDismissedCTA, setHasDismissedCTA] = useState(false);
@@ -225,14 +214,17 @@ export const App: React.FC = () => {
             <ArrowDown className="w-4 h-4 group-hover:translate-y-1 transition-transform duration-300" />
           </button>
 
-          {/* Dark Pill 'Download CV' Button */}
-          <button
-            onClick={handleDirectDownloadCV}
+          {/* Dark Pill 'Download CV' Native Direct Download */}
+          <a
+            href="./cv/NguyenThienLoc_Resume.pdf"
+            download="NguyenThienLoc_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-8 py-3.5 rounded-full bg-[#181818] hover:bg-[#222222] text-white text-xs sm:text-sm font-medium border border-white/[0.1] transition-all hover:scale-105 active:scale-95 flex items-center gap-2 cursor-pointer shadow-md"
           >
             <Download className="w-4 h-4 text-zinc-400" />
             <span>Download CV</span>
-          </button>
+          </a>
         </div>
 
       </section>
@@ -735,13 +727,16 @@ export const App: React.FC = () => {
             Download my complete resume with end-to-end technical details.
           </p>
 
-          <button
-            onClick={handleDirectDownloadCV}
+          <a
+            href="./cv/NguyenThienLoc_Resume.pdf"
+            download="NguyenThienLoc_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="w-full py-2.5 px-3 rounded-xl bg-[#cae8bd] hover:bg-[#d8f2cd] text-zinc-950 text-xs font-semibold flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer shadow-md"
           >
             <Download className="w-3.5 h-3.5" />
             <span>Download CV</span>
-          </button>
+          </a>
         </aside>
       )}
     </div>
