@@ -34,9 +34,6 @@ export const App: React.FC = () => {
   const [selectedPhoto, setSelectedPhoto] = useState<PhotoItem | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
 
-  // Hidden content until "See more" or Dock icon clicked
-  const [isContentRevealed, setIsContentRevealed] = useState(false);
-
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [photoErrors, setPhotoErrors] = useState<Record<string, boolean>>({});
 
@@ -66,14 +63,11 @@ export const App: React.FC = () => {
     }, 600);
   };
 
-  const handleRevealAndScroll = (sectionId: string) => {
-    setIsContentRevealed(true);
-    setTimeout(() => {
-      const el = document.getElementById(sectionId);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
-      }
-    }, 100);
+  const handleScrollToSection = (sectionId: string) => {
+    const el = document.getElementById(sectionId);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   const handleScrollToHome = () => {
@@ -116,35 +110,35 @@ export const App: React.FC = () => {
             <Home className="w-5 h-5" />
           </button>
           <button 
-            onClick={() => handleRevealAndScroll('about')}
+            onClick={() => handleScrollToSection('about')}
             className="p-2.5 rounded-full hover:text-white hover:bg-white/[0.08] transition-all cursor-pointer"
             title="About"
           >
             <Layers className="w-5 h-5" />
           </button>
           <button 
-            onClick={() => handleRevealAndScroll('experience')}
+            onClick={() => handleScrollToSection('experience')}
             className="p-2.5 rounded-full hover:text-white hover:bg-white/[0.08] transition-all cursor-pointer"
             title="Experience"
           >
             <Briefcase className="w-5 h-5" />
           </button>
           <button 
-            onClick={() => handleRevealAndScroll('projects')}
+            onClick={() => handleScrollToSection('projects')}
             className="p-2.5 rounded-full hover:text-white hover:bg-white/[0.08] transition-all cursor-pointer"
             title="Projects"
           >
             <FolderGit2 className="w-5 h-5" />
           </button>
           <button 
-            onClick={() => handleRevealAndScroll('photography')}
+            onClick={() => handleScrollToSection('photography')}
             className="p-2.5 rounded-full hover:text-white hover:bg-white/[0.08] transition-all cursor-pointer"
             title="Photography"
           >
             <Camera className="w-5 h-5" />
           </button>
           <button 
-            onClick={() => handleRevealAndScroll('contact')}
+            onClick={() => handleScrollToSection('contact')}
             className="p-2.5 rounded-full hover:text-white hover:bg-white/[0.08] transition-all cursor-pointer"
             title="Get in Touch"
           >
@@ -193,7 +187,7 @@ export const App: React.FC = () => {
         <div className="flex flex-wrap items-center justify-center gap-4 pt-10 animate-fade-in-up delay-400 opacity-0 [animation-fill-mode:forwards]">
           {/* Mint Glow 'See more' Button */}
           <button
-            onClick={() => handleRevealAndScroll('about')}
+            onClick={() => handleScrollToSection('about')}
             className="group px-8 py-3.5 rounded-full bg-[#cae8bd] hover:bg-[#d8f2cd] text-zinc-950 text-xs sm:text-sm font-semibold transition-all duration-300 animate-glow-pulse hover:scale-105 active:scale-95 flex items-center gap-2 cursor-pointer"
           >
             <span>See more</span>
@@ -213,10 +207,9 @@ export const App: React.FC = () => {
       </section>
 
       {/* ========================================================
-          MAIN VERTICAL CONTENT SECTIONS (Revealed with Smooth Animation)
+          MAIN VERTICAL CONTENT SECTIONS (Always Visible & Smooth Scrollable)
       ======================================================== */}
-      {isContentRevealed && (
-        <div className="max-w-[840px] mx-auto px-5 sm:px-8 py-12 space-y-24 animate-reveal-content">
+      <div className="max-w-[840px] mx-auto px-5 sm:px-8 py-12 space-y-24">
           
           {/* ========================================================
               1/ ABOUT
@@ -647,7 +640,6 @@ export const App: React.FC = () => {
             </button>
           </footer>
         </div>
-      )}
 
       {/* ========================================================
           MODALS
