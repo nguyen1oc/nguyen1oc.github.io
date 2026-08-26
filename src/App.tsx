@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   PERSONAL_INFO, 
   TECH_CATEGORIES, 
@@ -33,6 +33,28 @@ export const App: React.FC = () => {
   const [isCVModalOpen, setIsCVModalOpen] = useState(false);
   const [selectedPhoto, setSelectedPhoto] = useState<PhotoItem | null>(null);
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
+
+  // Bottom-right Floating CTA pop-up state
+  const [showFloatingCTA, setShowFloatingCTA] = useState(false);
+  const [hasDismissedCTA, setHasDismissedCTA] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (docHeight > 0) {
+        const scrollProgress = scrollTop / docHeight;
+        if (scrollProgress >= 0.65 && !hasDismissedCTA) {
+          setShowFloatingCTA(true);
+        } else if (scrollProgress < 0.25) {
+          setShowFloatingCTA(false);
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [hasDismissedCTA]);
 
   const [copiedEmail, setCopiedEmail] = useState(false);
   const [photoErrors, setPhotoErrors] = useState<Record<string, boolean>>({});
@@ -672,6 +694,46 @@ export const App: React.FC = () => {
             />
           </div>
         </div>
+      )}
+
+      {/* ========================================================
+          BOTTOM-RIGHT FLOATING "FEEL INTERESTED?" POP-UP
+      ======================================================== */}
+      {showFloatingCTA && (
+        <aside 
+          aria-label="Download CV prompt"
+          className="fixed bottom-6 right-6 z-40 max-w-[280px] sm:max-w-xs p-4 rounded-2xl bg-[#141414]/95 backdrop-blur-md border border-white/10 shadow-2xl shadow-black/80 animate-fade-in-up transition-all duration-300"
+        >
+          <div className="flex items-start justify-between gap-3 mb-2">
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#cae8bd] animate-ping" />
+              <h4 className="text-xs font-bold text-white tracking-wide">Feel Interested?</h4>
+            </div>
+            <button
+              onClick={() => {
+                setShowFloatingCTA(false);
+                setHasDismissedCTA(true);
+              }}
+              className="p-1 rounded-md text-zinc-500 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
+              title="Dismiss"
+              aria-label="Dismiss popup"
+            >
+              <X className="w-3.5 h-3.5" />
+            </button>
+          </div>
+
+          <p className="text-[11px] text-zinc-400 leading-relaxed mb-3">
+            Download my complete resume with end-to-end technical details.
+          </p>
+
+          <button
+            onClick={() => setIsCVModalOpen(true)}
+            className="w-full py-2.5 px-3 rounded-xl bg-[#cae8bd] hover:bg-[#d8f2cd] text-zinc-950 text-xs font-semibold flex items-center justify-center gap-2 transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer shadow-md"
+          >
+            <Download className="w-3.5 h-3.5" />
+            <span>Download CV</span>
+          </button>
+        </aside>
       )}
 
       {/* CV Modal */}
