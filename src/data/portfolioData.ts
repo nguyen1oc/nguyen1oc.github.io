@@ -44,6 +44,7 @@ export interface ProjectItem {
   title: string;
   subtitle?: string;
   period: string;
+  category: 'Agents & LLMs' | 'Computer Vision' | 'Data & Software';
   description: string;
   highlights?: string[];
   techStack: string[];
@@ -188,24 +189,108 @@ export const EXPERIENCES: ExperienceItem[] = [
   },
 ];
 
+// All 10 Projects Categorized & Sorted Chronologically (Newest to Oldest)
 export const PROJECTS: ProjectItem[] = [
   {
     title: 'ViVi: Multi-Agent Test-Drive Booking Assistant',
-    subtitle: 'Automated conversational agent with multi-step slot scheduling & 4-tier guardrails',
+    subtitle: 'Automated conversational booking system with 4-tier AI Guardrails & atomic slot locks',
     period: 'Aug. 2026',
-    badge: 'LangGraph & FastMCP',
-    description: 'Architected a stateful LangGraph multi-agent system with skill-based routing, intent classification, and sensitive policies coordinating a 9-step booking state machine. Implemented real-time concurrency with atomic slot reservations (Redis/PostgreSQL), SSE token streaming, and 4-layer AI Guardrail.',
-    techStack: ['FastAPI', 'LangGraph', 'PostgreSQL', 'Redis', 'GCP', 'React'],
+    category: 'Agents & LLMs',
+    badge: 'LangGraph Multi-Agent',
+    description: 'Architected a stateful LangGraph multi-agent system with skill-based routing, intent classification, and sensitive policies coordinating a 9-step booking state machine. Implemented real-time concurrency with atomic slot reservations (Redis/PostgreSQL), SSE token streaming, and 4-layer AI Guardrails.',
+    techStack: ['FastAPI', 'LangGraph', 'PostgreSQL', 'Redis', 'GCP Cloud Run', 'React'],
     demoUrl: 'https://c3-app-053.pages.dev',
+    githubUrl: 'https://github.com/nguyen1oc',
+  },
+  {
+    title: 'MCP LibreChat: Image Generation Tool Server',
+    subtitle: 'Model Context Protocol (MCP) server for autonomous multi-modal image synthesis',
+    period: 'Jul. 2026',
+    category: 'Agents & LLMs',
+    badge: 'FastMCP Server',
+    description: 'Developed an MCP tool server integrated into LibreChat, enabling LLMs to dynamically generate high-quality images via OpenRouter API with prompt refinement and error-handling pipelines.',
+    techStack: ['Python', 'FastMCP', 'LibreChat', 'OpenRouter API', 'Prompt Engineering'],
+    githubUrl: 'https://github.com/nguyen1oc/mcp-librechat-image-generation-via-OP',
+  },
+  {
+    title: 'FERECOM: Hybrid RAG & FastMCP Feedback Agent',
+    subtitle: 'Customer complaint resolution & training recommendation system',
+    period: 'Jun. 2026',
+    category: 'Agents & LLMs',
+    badge: 'Hybrid RAG + MCP',
+    description: 'Engineered a Hybrid RAG system (Dense + BM25 Sparse via Qdrant & LlamaIndex) mapping customer reviews to Tasker training modules with FastMCP tool standardizations and Langfuse observability.',
+    techStack: ['Python', 'FastMCP', 'Qdrant', 'LlamaIndex', 'BM25', 'Langfuse'],
+    githubUrl: 'https://github.com/nguyen1oc/ferecom',
+  },
+  {
+    title: 'MCP LibreChat: Coursera Course Discovery Tool',
+    subtitle: 'Contextual course search and recommendation tool server for LibreChat',
+    period: 'May 2026',
+    category: 'Agents & LLMs',
+    badge: 'MCP Tooling',
+    description: 'Implemented an MCP server connecting LibreChat with educational databases to search, filter, and summarize online courses and syllabus recommendations dynamically.',
+    techStack: ['Python', 'FastMCP', 'LibreChat', 'Tool Calling', 'JSON Schema'],
+    githubUrl: 'https://github.com/nguyen1oc/mcp-librechat-coursera-via-OP',
   },
   {
     title: 'Capstone Project: Adversarial Training for Face Super-Resolution',
-    subtitle: 'High-Fidelity Human Face Hallucination with Frequency-Aware Adversarial Loss',
+    subtitle: 'High-fidelity human face hallucination with frequency-aware adversarial loss',
     period: 'May 2026',
+    category: 'Computer Vision',
     badge: 'PyTorch & CUDA',
-    description: 'Conducted a comprehensive benchmark of state-of-the-art Face Super-Resolution models. Proposed an adversarial training strategy to balance perceptual realism and identity preservation, integrating SPARNet and CTCNet evaluated on CelebA, HELEN, and FFHQ.',
+    description: 'Benchmarked state-of-the-art Face Super-Resolution models and proposed an adversarial training strategy to balance perceptual realism and identity preservation, integrating SPARNet and CTCNet evaluated on CelebA, HELEN, and FFHQ.',
     techStack: ['Python', 'PyTorch', 'CUDA', 'SPARNet', 'CTCNet', 'LPIPS / FID'],
-    demoUrl: 'https://github.com/nguyen1oc',
+    githubUrl: 'https://github.com/nguyen1oc',
+  },
+  {
+    title: 'Unipath: University Admission Analytics Platform',
+    subtitle: 'Score prediction & personalized admission recommendation engine',
+    period: 'Apr. 2025',
+    category: 'Data & Software',
+    badge: 'Top 4/14 Grab Tech Bootcamp',
+    description: 'Engineered an exam analytics platform with automated Apache Airflow ETL pipelines, web scraping via Selenium/BeautifulSoup, and an optimized XGBoost regression model for admission cutoff prediction.',
+    techStack: ['Python', 'Apache Airflow', 'XGBoost', 'Selenium', 'FastAPI'],
+    githubUrl: 'https://github.com/nguyen1oc/Unipath',
+  },
+  {
+    title: 'Real-Time Arbitrary Style Transfer (AdaIN)',
+    subtitle: 'Neural style transfer via Adaptive Instance Normalization',
+    period: 'Mar. 2025',
+    category: 'Computer Vision',
+    badge: 'Deep Learning',
+    description: 'Implemented Adaptive Instance Normalization (AdaIN) in PyTorch to enable real-time, flexible artistic style transfer between arbitrary content and style images without network retraining.',
+    techStack: ['Python', 'PyTorch', 'OpenCV', 'VGG-19', 'Neural Style Transfer'],
+    githubUrl: 'https://github.com/nguyen1oc/style_transfer_adaIN',
+  },
+  {
+    title: 'RAG Architecture & Hands-on Tutorial',
+    subtitle: 'Production-ready Retrieval-Augmented Generation reference implementation',
+    period: 'Jan. 2025',
+    category: 'Agents & LLMs',
+    badge: 'RAG Architecture',
+    description: 'Comprehensive tutorial and reference implementation for Retrieval-Augmented Generation workflows, covering document chunking strategies, vector embeddings, and semantic hybrid search.',
+    techStack: ['Python', 'LangChain', 'Vector Embeddings', 'ChromaDB', 'Semantic Search'],
+    githubUrl: 'https://github.com/nguyen1oc/RAG_Tutorial',
+  },
+  {
+    title: 'Feature-Based Panorama Image Stitching',
+    subtitle: 'Multi-image feature alignment and cylindrical warping pipeline',
+    period: 'Nov. 2024',
+    category: 'Computer Vision',
+    badge: 'Classical CV',
+    description: 'Constructed an end-to-end computer vision pipeline for panorama creation, featuring SIFT keypoint detection, RANSAC homography estimation, and seamless image blending.',
+    techStack: ['Python', 'OpenCV', 'SIFT / ORB', 'RANSAC', 'Homography'],
+    githubUrl: 'https://github.com/nguyen1oc/Image-Stitching',
+  },
+  {
+    title: 'E-BookStore HCMUT: Online Bookstore Platform',
+    subtitle: 'Full-stack enterprise bookstore management system',
+    period: 'Jun. 2024',
+    category: 'Data & Software',
+    badge: 'Web Application',
+    description: 'Built a full-stack online bookstore management platform supporting multi-role authentication, product catalog exploration, shopping cart workflows, and relational database management.',
+    techStack: ['Java', 'Spring Boot', 'PostgreSQL', 'HTML/CSS/JS', 'MVC Architecture'],
+    githubUrl: 'https://github.com/nguyen1oc/E-BookStoreHCMUT',
   },
 ];
 
@@ -333,7 +418,6 @@ export const PHOTOS: PhotoItem[] = [
   },
 ];
 
-// 24 Curated Iconic Films (Nolan, The Truman Show, Dune 1 & 2, Parasite, Matrix, 2012, La La Land, Imitation Game, Social Network, etc.)
 export const MOVIES: MovieItem[] = [
   {
     id: 'm1',
@@ -577,7 +661,6 @@ export const MOVIES: MovieItem[] = [
   },
 ];
 
-// 16 Curated Vietnamese Indie & Hip-Hop Artists with Exact YouTube Channel Avatars
 export const ARTISTS: ArtistItem[] = [
   {
     id: 'a1',
