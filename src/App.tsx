@@ -438,14 +438,43 @@ export const App: React.FC = () => {
           </section>
 
           {/* ========================================================
-              TRANSITION STATEMENT (Between Projects & Photography)
+              TRANSITION: THE ALTER EGO (From Terminal to Viewfinder)
           ======================================================== */}
-          <div className="py-4 text-center max-w-2xl mx-auto px-4">
-            <div className="p-8 rounded-3xl bg-gradient-to-b from-[#151515] to-[#101010] border border-white/[0.06] space-y-3 relative shadow-xl">
-              <p className="font-serif italic text-base sm:text-lg text-zinc-300 leading-relaxed">
-                "When I step away from neural networks and terminals, I observe the world through street photography."
-              </p>
-              <div className="h-[1px] w-12 bg-white/20 mx-auto" />
+          <div className="py-8 px-2">
+            <div className="relative group max-w-2xl mx-auto rounded-3xl p-[1px] overflow-hidden transition-all duration-700 hover:shadow-[0_0_50px_-10px_rgba(202,232,189,0.35)]">
+              {/* Ethereal Ambient Shifting Gradient */}
+              <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/20 via-[#cae8bd]/30 to-amber-500/20 rounded-3xl opacity-40 group-hover:opacity-100 blur-xl transition-all duration-700 group-hover:scale-105" />
+              
+              <div className="relative rounded-3xl bg-gradient-to-b from-[#161616] via-[#101010] to-[#0a0a0a] p-8 sm:p-12 border border-white/[0.08] text-center space-y-6 overflow-hidden">
+                
+                {/* Viewfinder Corner Crop Marks (Photographic Frame) */}
+                <div className="absolute top-4 left-4 w-3.5 h-3.5 border-t-2 border-l-2 border-white/20 group-hover:border-[#cae8bd] transition-colors duration-500" />
+                <div className="absolute top-4 right-4 w-3.5 h-3.5 border-t-2 border-r-2 border-white/20 group-hover:border-[#cae8bd] transition-colors duration-500" />
+                <div className="absolute bottom-4 left-4 w-3.5 h-3.5 border-b-2 border-l-2 border-white/20 group-hover:border-[#cae8bd] transition-colors duration-500" />
+                <div className="absolute bottom-4 right-4 w-3.5 h-3.5 border-b-2 border-r-2 border-white/20 group-hover:border-[#cae8bd] transition-colors duration-500" />
+
+                {/* Perspective Shift Pill */}
+                <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] group-hover:border-white/20 text-[11px] font-mono text-zinc-400 group-hover:text-zinc-200 transition-all">
+                  <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#cae8bd] animate-ping" />
+                  <span>The Observer Perspective</span>
+                  <span className="text-zinc-600">•</span>
+                  <span className="text-[#cae8bd]">35mm Reality</span>
+                </div>
+
+                {/* Poetic Transition Quote */}
+                <p className="font-serif italic text-lg sm:text-2xl text-zinc-200 group-hover:text-white leading-relaxed tracking-wide transition-colors duration-500">
+                  “When I step away from neural networks and terminals, I observe the world through street photography.”
+                </p>
+
+                {/* Subtle Signature Line */}
+                <div className="flex items-center justify-center gap-3 pt-2 text-xs text-zinc-500 font-mono">
+                  <div className="h-[1px] w-8 bg-gradient-to-r from-transparent to-white/20" />
+                  <span className="tracking-widest uppercase text-[10px] text-zinc-400 group-hover:text-zinc-300">
+                    Capturing human moments in Saigon
+                  </span>
+                  <div className="h-[1px] w-8 bg-gradient-to-l from-transparent to-white/20" />
+                </div>
+              </div>
             </div>
           </div>
 
@@ -645,46 +674,31 @@ export const App: React.FC = () => {
           MODALS
       ======================================================== */}
 
-      {/* PHOTO LIGHTBOX (Backdrop Click to Dismiss) */}
+      {/* PHOTO LIGHTBOX (Pure Clean Image Zoom) */}
       {selectedPhoto && (
         <div 
           onClick={() => setSelectedPhoto(null)}
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-black/90 backdrop-blur-md animate-fadeIn cursor-pointer"
+          className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/95 backdrop-blur-md animate-fadeIn cursor-pointer"
         >
+          {/* Close Button */}
           <button
             onClick={() => setSelectedPhoto(null)}
-            className="absolute top-4 right-4 z-50 p-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors cursor-pointer"
+            className="absolute top-5 right-5 z-50 p-2.5 rounded-full bg-white/10 hover:bg-white/20 text-white transition-all cursor-pointer shadow-lg"
+            title="Close"
           >
-            <X className="w-5 h-5" />
+            <X className="w-6 h-6" />
           </button>
 
+          {/* Large Clean Zoomed Image */}
           <div 
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-2xl bg-[#141414] text-zinc-200 rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row border border-white/10 max-h-[90vh] cursor-default"
+            className="relative max-w-5xl max-h-[92vh] flex items-center justify-center cursor-default animate-reveal-content"
           >
-            <div className="md:w-1/2 bg-black flex items-center justify-center p-2">
-              <img
-                src={getPhotoSrc(selectedPhoto)}
-                alt={selectedPhoto.title}
-                className="max-h-[55vh] md:max-h-[75vh] w-auto max-w-full object-contain"
-              />
-            </div>
-            <div className="md:w-1/2 p-6 sm:p-7 overflow-y-auto custom-scrollbar space-y-3.5">
-              <div className="flex items-center justify-between text-xs text-zinc-500">
-                <span className="font-semibold text-white bg-white/[0.06] px-2.5 py-0.5 rounded-full border border-white/10">
-                  {selectedPhoto.location}
-                </span>
-                <span className="font-mono">{selectedPhoto.year}</span>
-              </div>
-              <h3 className="text-lg font-bold text-white">{selectedPhoto.title}</h3>
-              <p className="text-xs text-zinc-300 italic bg-white/[0.03] p-3 rounded-2xl border border-white/[0.06] leading-relaxed">
-                "{selectedPhoto.caption}"
-              </p>
-              <p className="text-xs text-zinc-400 leading-relaxed">{selectedPhoto.story}</p>
-              <p className="pt-2 border-t border-white/[0.06] text-[11px] text-zinc-500 font-mono">
-                📷 {selectedPhoto.cameraInfo}
-              </p>
-            </div>
+            <img
+              src={getPhotoSrc(selectedPhoto)}
+              alt="Zoomed photography"
+              className="max-h-[90vh] max-w-full w-auto h-auto object-contain rounded-2xl shadow-2xl ring-1 ring-white/10"
+            />
           </div>
         </div>
       )}
